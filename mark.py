@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:8000"
+API_URL = "http://127.0.0.1:8000"
 
 st.title("🎓 Student Placement Prediction")
 
@@ -39,4 +39,4 @@ if st.button("Predict Placement"):
         result = "Placed" if prediction == 1 else "Not Placed"
         st.success(f"Prediction: {result}")
     else:
-        st.error(f"Error: {response.json()}")
+        st.error("Error: Could not get a response from the API.")
